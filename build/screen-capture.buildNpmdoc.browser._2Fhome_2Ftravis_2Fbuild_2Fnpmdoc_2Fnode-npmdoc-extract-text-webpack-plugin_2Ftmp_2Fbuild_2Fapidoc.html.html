@@ -1,0 +1,808 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://github.com/webpack/extract-text-webpack-plugin">extract-text-webpack-plugin (v2.1.0)</a>
+</h1>
+<h4>Extract text from bundle into a file.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin">module extract-text-webpack-plugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>ExtractedModule
+            <span class="apidocSignatureSpan">(identifier, originalModule, source, sourceMap, addtitionalInformation, prevModules)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.extract">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>extract
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.loader">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>loader
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>ExtractedModule.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin.ExtractedModule">module extract-text-webpack-plugin.ExtractedModule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.ExtractedModule">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>ExtractedModule
+            <span class="apidocSignatureSpan">(identifier, originalModule, source, sourceMap, addtitionalInformation, prevModules)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin.ExtractedModule.prototype">module extract-text-webpack-plugin.ExtractedModule.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.addChunk">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>addChunk
+            <span class="apidocSignatureSpan">(chunk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.addPrevModules">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>addPrevModules
+            <span class="apidocSignatureSpan">(prevModules)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getOrder">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>getOrder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getOriginalModule">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>getOriginalModule
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getPrevModules">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>getPrevModules
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.identifier">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>identifier
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.removeChunk">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>removeChunk
+            <span class="apidocSignatureSpan">(chunk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.rewriteChunkInReasons">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>rewriteChunkInReasons
+            <span class="apidocSignatureSpan">(oldChunk, newChunks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.setOriginalModule">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>setOriginalModule
+            <span class="apidocSignatureSpan">(originalModule)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.source">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>source
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin.loader">module extract-text-webpack-plugin.loader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.loader.loader">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>loader
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.loader.pitch">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.loader.</span>pitch
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.extract-text-webpack-plugin" id="apidoc.module.extract-text-webpack-plugin">module extract-text-webpack-plugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>ExtractedModule
+        <span class="apidocSignatureSpan">(identifier, originalModule, source, sourceMap, addtitionalInformation, prevModules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtractedModule(identifier, originalModule, source, sourceMap, addtitionalInformation, prevModules) {
+	this._identifier = identifier;
+	this._originalModule = originalModule;
+	this._source = source;
+	this._sourceMap = sourceMap;
+	this._prevModules = prevModules;
+	this.addtitionalInformation = addtitionalInformation;
+	this.chunks = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.extract" id="apidoc.element.extract-text-webpack-plugin.extract">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>extract
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+module.exports = {
+module: {
+  rules: [
+    {
+      test: /\.css$/,
+      use: ExtractTextPlugin.<span class="apidocCodeKeywordSpan">extract</span>({
+        fallback: "style-loader",
+        use: "css-loader"
+      })
+    }
+  ]
+},
+plugins: [
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.loader" id="apidoc.element.extract-text-webpack-plugin.loader">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>loader
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loader = function (options) {
+	return { loader: require.resolve("./loader"), options: options };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			"}"
+		);
+	}
+	return source;
+};
+
+ExtractTextPlugin.prototype.loader = function(options) {
+	return ExtractTextPlugin.<span class="apidocCodeKeywordSpan">loader</span>(mergeOptions({id: this.id}, options));
+};
+
+ExtractTextPlugin.prototype.extract = function(options) {
+	if(arguments.length &gt; 1) {
+		throw new Error("Breaking change: extract now only takes a single argument. Either an options " +
+						"object *or* the loader(s).\n" +
+						"Example: if your old code looked like this:\n" +
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.extract-text-webpack-plugin.ExtractedModule" id="apidoc.module.extract-text-webpack-plugin.ExtractedModule">module extract-text-webpack-plugin.ExtractedModule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.ExtractedModule" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.ExtractedModule">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>ExtractedModule
+        <span class="apidocSignatureSpan">(identifier, originalModule, source, sourceMap, addtitionalInformation, prevModules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtractedModule(identifier, originalModule, source, sourceMap, addtitionalInformation, prevModules) {
+	this._identifier = identifier;
+	this._originalModule = originalModule;
+	this._source = source;
+	this._sourceMap = sourceMap;
+	this._prevModules = prevModules;
+	this.addtitionalInformation = addtitionalInformation;
+	this.chunks = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.extract-text-webpack-plugin.ExtractedModule.prototype" id="apidoc.module.extract-text-webpack-plugin.ExtractedModule.prototype">module extract-text-webpack-plugin.ExtractedModule.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.addChunk" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.addChunk">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>addChunk
+        <span class="apidocSignatureSpan">(chunk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addChunk = function (chunk) {
+	var idx = this.chunks.indexOf(chunk);
+	if(idx &lt; 0)
+		this.chunks.push(chunk);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			if(c.isInitial()) return;
+			this.mergeNonInitialChunks(c, chunk, checkedChunks);
+		}, this);
+	} else if(checkedChunks.indexOf(chunk) &lt; 0) {
+		checkedChunks.push(chunk);
+		chunk.modules.slice().forEach(function(module) {
+			intoChunk.addModule(module);
+			module.<span class="apidocCodeKeywordSpan">addChunk</span>(intoChunk);
+		});
+		chunk.chunks.forEach(function(c) {
+			if(c.isInitial()) return;
+			this.mergeNonInitialChunks(c, intoChunk, checkedChunks);
+		}, this);
+	}
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.addPrevModules" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.addPrevModules">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>addPrevModules
+        <span class="apidocSignatureSpan">(prevModules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addPrevModules = function (prevModules) {
+	prevModules.forEach(function(m) {
+		if(this._prevModules.indexOf(m) &lt; 0)
+			this._prevModules.push(m);
+	}, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ExtractTextPluginCompilation.prototype.addModule = function(identifier, originalModule, source, additionalInformation, sourceMap
+, prevModules) {
+	var m;
+	if(!this.modulesByIdentifier[identifier]) {
+		m = this.modulesByIdentifier[identifier] = new ExtractedModule(identifier, originalModule, source, sourceMap, additionalInformation
+, prevModules);
+	} else {
+		m = this.modulesByIdentifier[identifier];
+		m.<span class="apidocCodeKeywordSpan">addPrevModules</span>(prevModules);
+		if(originalModule.index2 &lt; m.getOriginalModule().index2) {
+			m.setOriginalModule(originalModule);
+		}
+	}
+	return m;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getOrder" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getOrder">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>getOrder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOrder = function () {
+	// http://stackoverflow.com/a/14676665/1458162
+	return /^@import url/.test(this._source) ? 0 : 1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function isInvalidOrder(a, b) {
+	var bBeforeA = a.getPrevModules().indexOf(b) &gt;= 0;
+	var aBeforeB = b.getPrevModules().indexOf(a) &gt;= 0;
+	return aBeforeB &amp;&amp; bBeforeA;
+}
+
+function getOrder(a, b) {
+	var aOrder = a.<span class="apidocCodeKeywordSpan">getOrder</span>();
+	var bOrder = b.getOrder();
+	if(aOrder &lt; bOrder) return -1;
+	if(aOrder &gt; bOrder) return 1;
+	var aIndex = a.getOriginalModule().index2;
+	var bIndex = b.getOriginalModule().index2;
+	if(aIndex &lt; bIndex) return -1;
+	if(aIndex &gt; bIndex) return 1;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getOriginalModule" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getOriginalModule">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>getOriginalModule
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOriginalModule = function () {
+	return this._originalModule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ExtractTextPluginCompilation.prototype.addModule = function(identifier, originalModule, source, additionalInformation, sourceMap
+, prevModules) {
+	var m;
+	if(!this.modulesByIdentifier[identifier]) {
+		m = this.modulesByIdentifier[identifier] = new ExtractedModule(identifier, originalModule, source, sourceMap, additionalInformation
+, prevModules);
+	} else {
+		m = this.modulesByIdentifier[identifier];
+		m.addPrevModules(prevModules);
+		if(originalModule.index2 &lt; m.<span class="apidocCodeKeywordSpan">getOriginalModule</span>().index2) {
+			m.setOriginalModule(originalModule);
+		}
+	}
+	return m;
+};
+
+ExtractTextPluginCompilation.prototype.addResultToChunk = function(identifier, result, originalModule, extractedChunk) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getPrevModules" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.getPrevModules">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>getPrevModules
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPrevModules = function () {
+	return this._prevModules;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var moduleSource = module.source();
+		source.add(this.applyAdditionalInformation(moduleSource, module.additionalInformation));
+	}, this);
+	return source;
+};
+
+function isInvalidOrder(a, b) {
+	var bBeforeA = a.<span class="apidocCodeKeywordSpan">getPrevModules</span>().indexOf(b) &gt;= 0;
+	var aBeforeB = b.getPrevModules().indexOf(a) &gt;= 0;
+	return aBeforeB &amp;&amp; bBeforeA;
+}
+
+function getOrder(a, b) {
+	var aOrder = a.getOrder();
+	var bOrder = b.getOrder();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.identifier" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.identifier">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>identifier
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">identifier = function () {
+	return this._identifier;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var bIndex = b.getOriginalModule().index2;
+	if(aIndex &lt; bIndex) return -1;
+	if(aIndex &gt; bIndex) return 1;
+	var bBeforeA = a.getPrevModules().indexOf(b) &gt;= 0;
+	var aBeforeB = b.getPrevModules().indexOf(a) &gt;= 0;
+	if(aBeforeB &amp;&amp; !bBeforeA) return -1;
+	if(!aBeforeB &amp;&amp; bBeforeA) return 1;
+	var ai = a.<span class="apidocCodeKeywordSpan">identifier</span>();
+	var bi = b.identifier();
+	if(ai &lt; bi) return -1;
+	if(ai &gt; bi) return 1;
+	return 0;
+}
+
+function ExtractTextPlugin(options) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.removeChunk" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.removeChunk">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>removeChunk
+        <span class="apidocSignatureSpan">(chunk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeChunk = function (chunk) {
+	var idx = this.chunks.indexOf(chunk);
+	if(idx &gt;= 0) {
+		this.chunks.splice(idx, 1);
+		chunk.removeModule(this);
+		return true;
+	}
+	return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.rewriteChunkInReasons" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.rewriteChunkInReasons">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>rewriteChunkInReasons
+        <span class="apidocSignatureSpan">(oldChunk, newChunks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rewriteChunkInReasons = function (oldChunk, newChunks) { }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.setOriginalModule" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.setOriginalModule">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>setOriginalModule
+        <span class="apidocSignatureSpan">(originalModule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOriginalModule = function (originalModule) {
+	this._originalModule = originalModule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var m;
+	if(!this.modulesByIdentifier[identifier]) {
+		m = this.modulesByIdentifier[identifier] = new ExtractedModule(identifier, originalModule, source, sourceMap, additionalInformation
+, prevModules);
+	} else {
+		m = this.modulesByIdentifier[identifier];
+		m.addPrevModules(prevModules);
+		if(originalModule.index2 &lt; m.getOriginalModule().index2) {
+			m.<span class="apidocCodeKeywordSpan">setOriginalModule</span>(originalModule);
+		}
+	}
+	return m;
+};
+
+ExtractTextPluginCompilation.prototype.addResultToChunk = function(identifier, result, originalModule, extractedChunk) {
+	if(!Array.isArray(result)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.source" id="apidoc.element.extract-text-webpack-plugin.ExtractedModule.prototype.source">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.ExtractedModule.prototype.</span>source
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function () {
+	if(this._sourceMap)
+		return new SourceMapSource(this._source, null, this._sourceMap);
+	else
+		return new RawSource(this._source);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		prevModules.push(module);
+	}, this);
+};
+
+ExtractTextPlugin.prototype.renderExtractedChunk = function(chunk) {
+	var source = new ConcatSource();
+	chunk.modules.forEach(function(module) {
+		var moduleSource = module.<span class="apidocCodeKeywordSpan">source</span>();
+		source.add(this.applyAdditionalInformation(moduleSource, module.additionalInformation));
+	}, this);
+	return source;
+};
+
+function isInvalidOrder(a, b) {
+	var bBeforeA = a.getPrevModules().indexOf(b) &gt;= 0;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.extract-text-webpack-plugin.loader" id="apidoc.module.extract-text-webpack-plugin.loader">module extract-text-webpack-plugin.loader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.loader.loader" id="apidoc.element.extract-text-webpack-plugin.loader.loader">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>loader
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loader = function (source) {
+	if(this.cacheable) this.cacheable();
+	return source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			"}"
+		);
+	}
+	return source;
+};
+
+ExtractTextPlugin.prototype.loader = function(options) {
+	return ExtractTextPlugin.<span class="apidocCodeKeywordSpan">loader</span>(mergeOptions({id: this.id}, options));
+};
+
+ExtractTextPlugin.prototype.extract = function(options) {
+	if(arguments.length &gt; 1) {
+		throw new Error("Breaking change: extract now only takes a single argument. Either an options " +
+						"object *or* the loader(s).\n" +
+						"Example: if your old code looked like this:\n" +
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.loader.pitch" id="apidoc.element.extract-text-webpack-plugin.loader.pitch">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.loader.</span>pitch
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pitch = function (request) {
+	if(this.cacheable) this.cacheable();
+	var query = loaderUtils.getOptions(this) || {};
+	var loaders = this.loaders.slice(this.loaderIndex + 1);
+	this.addDependency(this.resourcePath);
+	// We already in child compiler, return empty bundle
+	if(this[NS] === undefined) {
+		throw new Error(
+			'"extract-text-webpack-plugin" loader is used without the corresponding plugin, ' +
+			'refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example'
+		);
+	} else if(this[NS] === false) {
+		return "";
+	} else if(this[NS](null, query)) {
+		if(query.omit) {
+			this.loaderIndex += +query.omit + 1;
+			request = request.split("!").slice(+query.omit).join("!");
+			loaders = loaders.slice(+query.omit);
+		}
+		var resultSource;
+		if(query.remove) {
+			resultSource = "// removed by extract-text-webpack-plugin";
+		} else {
+			resultSource = undefined;
+		}
+
+		var childFilename = "extract-text-webpack-plugin-output-filename"; // eslint-disable-line no-path-concat
+		var publicPath = typeof query.publicPath === "string" ? query.publicPath : this._compilation.outputOptions.publicPath;
+		var outputOptions = {
+			filename: childFilename,
+			publicPath: publicPath
+		};
+		var childCompiler = this._compilation.createChildCompiler("extract-text-webpack-plugin", outputOptions);
+		childCompiler.apply(new NodeTemplatePlugin(outputOptions));
+		childCompiler.apply(new LibraryTemplatePlugin(null, "commonjs2"));
+		childCompiler.apply(new NodeTargetPlugin());
+		childCompiler.apply(new SingleEntryPlugin(this.context, "!!" + request));
+		childCompiler.apply(new LimitChunkCountPlugin({ maxChunks: 1 }));
+		var subCache = "subcache " + NS + " " + request; // eslint-disable-line no-path-concat
+		childCompiler.plugin("compilation", function(compilation) {
+			if(compilation.cache) {
+				if(!compilation.cache[subCache])
+					compilation.cache[subCache] = {};
+				compilation.cache = compilation.cache[subCache];
+			}
+		});
+		// We set loaderContext[NS] = false to indicate we already in
+		// a child compiler so we don't spawn another child compilers from there.
+		childCompiler.plugin("this-compilation", function(compilation) {
+			compilation.plugin("normal-module-loader", function(loaderContext, module) {
+				loaderContext[NS] = false;
+				if (module.request === request) {
+					module.loaders = loaders.map(function(loader) {
+						return {
+							loader: loader.path,
+							options: loader.options
+						};
+					});
+				}
+			});
+		});
+
+		var source;
+		childCompiler.plugin("after-compile", function(compilation, callback) {
+			source = compilation.assets[childFilename] &amp;&amp; compilation.assets[childFilename].source();
+
+			// Remove all chunk assets
+			compilation.chunks.forEach(function(chunk) {
+				chunk.files.forEach(function(file) {
+					delete compilation.assets[file];
+				});
+			});
+
+			callback();
+		});
+		var callback = this.async();
+		childCompiler.runAsChild(function(err, entries, compilation) {
+			if(err) return callback(err);
+
+			if(compilation.errors.length &gt; 0) {
+				return callback(compilation.errors[0]);
+			}
+			compilation.fileDependencies.forEach(function(dep) {
+				this.addDependency(dep);
+			}, this);
+			compilation.contextDependencies.forEach(function(dep) {
+				this.addContextDependency(dep);
+			}, this);
+			if(!source) {
+				return callback(new Error("Didn't get a result from child compiler"));
+			}
+			try {
+				var text = this.exec(source, request);
+				if(typeof text === "string")
+					text = [[0, text]];
+				text.forEach(function(item) {
+					var id = item[0];
+					compilation.modules.forEach(function(module) {
+						if(module.id === id)
+							item[0] = module.identifier();
+					});
+				});
+				this[NS](text, query);
+				if(text.locals &amp;&amp; typeof resultSource !== "undefined") {
+					resultSource += "\nmodule.exports = " + JSON.stringify(text.locals) + ";";
+				}
+			} catch(e) {
+				return callback(e);
+			}
+			if(resultSource)
+				callback(null, resultSource);
+			else
+				callback();
+		}.bind(this));
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
