@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://github.com/webpack/extract-text-webpack-plugin"
-
-    >extract-text-webpack-plugin (v2.1.0)</a>
+    <a href="http://github.com/webpack/extract-text-webpack-plugin">extract-text-webpack-plugin (v2.1.0)</a>
 </h1>
 <h4>Extract text from bundle into a file.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin">module extract-text-webpack-plugin</a><ol>
 
@@ -113,17 +106,17 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function ExtractTextPlugin(options) {
-	if(arguments.length &#x3e; 1) {
-		throw new Error(&#x22;Breaking change: ExtractTextPlugin now only takes a single argument. Either an options &#x22; +
-						&#x22;object *or* the name of the result file.\n&#x22; +
-						&#x22;Example: if your old code looked like this:\n&#x22; +
-						&#x22;    new ExtractTextPlugin(&#x27;css/[name].css&#x27;, { disable: false, allChunks: true })\n\n&#x22; +
-						&#x22;You would change it to:\n&#x22; +
-						&#x22;    new ExtractTextPlugin({ filename: &#x27;css/[name].css&#x27;, disable: false, allChunks: true })\n\n&#x22; +
-						&#x22;The available options are:\n&#x22; +
-						&#x22;    filename: string\n&#x22; +
-						&#x22;    allChunks: boolean\n&#x22; +
-						&#x22;    disable: boolean\n&#x22;);
+	if(arguments.length &gt; 1) {
+		throw new Error("Breaking change: ExtractTextPlugin now only takes a single argument. Either an options " +
+						"object *or* the name of the result file.\n" +
+						"Example: if your old code looked like this:\n" +
+						"    new ExtractTextPlugin('css/[name].css', { disable: false, allChunks: true })\n\n" +
+						"You would change it to:\n" +
+						"    new ExtractTextPlugin({ filename: 'css/[name].css', disable: false, allChunks: true })\n\n" +
+						"The available options are:\n" +
+						"    filename: string\n" +
+						"    allChunks: boolean\n" +
+						"    disable: boolean\n");
 	}
 	if(isString(options)) {
 		options = { filename: options };
@@ -151,7 +144,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">extract = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-const ExtractTextPlugin = require(&#x22;extract-text-webpack-plugin&#x22;);
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 module: {
@@ -159,8 +152,8 @@ module: {
     {
       test: /\.css$/,
       use: ExtractTextPlugin.<span class="apidocCodeKeywordSpan">extract</span>({
-        fallback: &#x22;style-loader&#x22;,
-        use: &#x22;css-loader&#x22;
+        fallback: "style-loader",
+        use: "css-loader"
       })
     }
   ]
@@ -179,10 +172,10 @@ plugins: [
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">loader = function (options) {
-	return { loader: require.resolve(&#x22;./loader&#x22;), options: options };
+	return { loader: require.resolve("./loader"), options: options };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-			&#x22;}&#x22;
+			"}"
 		);
 	}
 	return source;
@@ -193,10 +186,10 @@ ExtractTextPlugin.prototype.loader = function(options) {
 };
 
 ExtractTextPlugin.prototype.extract = function(options) {
-	if(arguments.length &#x3e; 1) {
-		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
-						&#x22;object *or* the loader(s).\n&#x22; +
-						&#x22;Example: if your old code looked like this:\n&#x22; +
+	if(arguments.length &gt; 1) {
+		throw new Error("Breaking change: extract now only takes a single argument. Either an options " +
+						"object *or* the loader(s).\n" +
+						"Example: if your old code looked like this:\n" +
 ...</pre></li>
     </ul>
 
@@ -224,3 +217,4 @@ ExtractTextPlugin.prototype.extract = function(options) {
     ]
 </div>
 </div>
+</body></html>
