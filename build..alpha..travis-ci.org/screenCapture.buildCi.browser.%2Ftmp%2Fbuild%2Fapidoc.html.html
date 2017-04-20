@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://github.com/webpack/extract-text-webpack-plugin"
-
-    >extract-text-webpack-plugin (v2.1.0)</a>
+    <a href="http://github.com/webpack/extract-text-webpack-plugin">extract-text-webpack-plugin (v2.1.0)</a>
 </h1>
 <h4>Extract text from bundle into a file.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin">module extract-text-webpack-plugin</a><ol>
 
@@ -248,17 +241,17 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function ExtractTextPlugin(options) {
-	if(arguments.length &#x3e; 1) {
-		throw new Error(&#x22;Breaking change: ExtractTextPlugin now only takes a single argument. Either an options &#x22; +
-						&#x22;object *or* the name of the result file.\n&#x22; +
-						&#x22;Example: if your old code looked like this:\n&#x22; +
-						&#x22;    new ExtractTextPlugin(&#x27;css/[name].css&#x27;, { disable: false, allChunks: true })\n\n&#x22; +
-						&#x22;You would change it to:\n&#x22; +
-						&#x22;    new ExtractTextPlugin({ filename: &#x27;css/[name].css&#x27;, disable: false, allChunks: true })\n\n&#x22; +
-						&#x22;The available options are:\n&#x22; +
-						&#x22;    filename: string\n&#x22; +
-						&#x22;    allChunks: boolean\n&#x22; +
-						&#x22;    disable: boolean\n&#x22;);
+	if(arguments.length &gt; 1) {
+		throw new Error("Breaking change: ExtractTextPlugin now only takes a single argument. Either an options " +
+						"object *or* the name of the result file.\n" +
+						"Example: if your old code looked like this:\n" +
+						"    new ExtractTextPlugin('css/[name].css', { disable: false, allChunks: true })\n\n" +
+						"You would change it to:\n" +
+						"    new ExtractTextPlugin({ filename: 'css/[name].css', disable: false, allChunks: true })\n\n" +
+						"The available options are:\n" +
+						"    filename: string\n" +
+						"    allChunks: boolean\n" +
+						"    disable: boolean\n");
 	}
 	if(isString(options)) {
 		options = { filename: options };
@@ -307,7 +300,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">extract = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-const ExtractTextPlugin = require(&#x22;extract-text-webpack-plugin&#x22;);
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 module: {
@@ -315,8 +308,8 @@ module: {
     {
       test: /\.css$/,
       use: ExtractTextPlugin.<span class="apidocCodeKeywordSpan">extract</span>({
-        fallback: &#x22;style-loader&#x22;,
-        use: &#x22;css-loader&#x22;
+        fallback: "style-loader",
+        use: "css-loader"
       })
     }
   ]
@@ -335,10 +328,10 @@ plugins: [
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">loader = function (options) {
-	return { loader: require.resolve(&#x22;./loader&#x22;), options: options };
+	return { loader: require.resolve("./loader"), options: options };
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-			&#x22;}&#x22;
+			"}"
 		);
 	}
 	return source;
@@ -349,10 +342,10 @@ ExtractTextPlugin.prototype.loader = function(options) {
 };
 
 ExtractTextPlugin.prototype.extract = function(options) {
-	if(arguments.length &#x3e; 1) {
-		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
-						&#x22;object *or* the loader(s).\n&#x22; +
-						&#x22;Example: if your old code looked like this:\n&#x22; +
+	if(arguments.length &gt; 1) {
+		throw new Error("Breaking change: extract now only takes a single argument. Either an options " +
+						"object *or* the loader(s).\n" +
+						"Example: if your old code looked like this:\n" +
 ...</pre></li>
     </ul>
 
@@ -400,14 +393,14 @@ ExtractTextPlugin.prototype.extract = function(options) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">addChunk = function (chunk) {
 	var idx = this.chunks.indexOf(chunk);
-	if(idx &#x3c; 0)
+	if(idx &lt; 0)
 		this.chunks.push(chunk);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 			if(c.isInitial()) return;
 			this.mergeNonInitialChunks(c, chunk, checkedChunks);
 		}, this);
-	} else if(checkedChunks.indexOf(chunk) &#x3c; 0) {
+	} else if(checkedChunks.indexOf(chunk) &lt; 0) {
 		checkedChunks.push(chunk);
 		chunk.modules.slice().forEach(function(module) {
 			intoChunk.addModule(module);
@@ -433,7 +426,7 @@ ExtractTextPlugin.prototype.extract = function(options) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">addPrevModules = function (prevModules) {
 	prevModules.forEach(function(m) {
-		if(this._prevModules.indexOf(m) &#x3c; 0)
+		if(this._prevModules.indexOf(m) &lt; 0)
 			this._prevModules.push(m);
 	}, this);
 }</pre></li>
@@ -448,7 +441,7 @@ ExtractTextPluginCompilation.prototype.addModule = function(identifier, original
 	} else {
 		m = this.modulesByIdentifier[identifier];
 		m.<span class="apidocCodeKeywordSpan">addPrevModules</span>(prevModules);
-		if(originalModule.index2 &#x3c; m.getOriginalModule().index2) {
+		if(originalModule.index2 &lt; m.getOriginalModule().index2) {
 			m.setOriginalModule(originalModule);
 		}
 	}
@@ -472,20 +465,20 @@ ExtractTextPluginCompilation.prototype.addModule = function(identifier, original
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 function isInvalidOrder(a, b) {
-	var bBeforeA = a.getPrevModules().indexOf(b) &#x3e;= 0;
-	var aBeforeB = b.getPrevModules().indexOf(a) &#x3e;= 0;
-	return aBeforeB &#x26;&#x26; bBeforeA;
+	var bBeforeA = a.getPrevModules().indexOf(b) &gt;= 0;
+	var aBeforeB = b.getPrevModules().indexOf(a) &gt;= 0;
+	return aBeforeB &amp;&amp; bBeforeA;
 }
 
 function getOrder(a, b) {
 	var aOrder = a.<span class="apidocCodeKeywordSpan">getOrder</span>();
 	var bOrder = b.getOrder();
-	if(aOrder &#x3c; bOrder) return -1;
-	if(aOrder &#x3e; bOrder) return 1;
+	if(aOrder &lt; bOrder) return -1;
+	if(aOrder &gt; bOrder) return 1;
 	var aIndex = a.getOriginalModule().index2;
 	var bIndex = b.getOriginalModule().index2;
-	if(aIndex &#x3c; bIndex) return -1;
-	if(aIndex &#x3e; bIndex) return 1;
+	if(aIndex &lt; bIndex) return -1;
+	if(aIndex &gt; bIndex) return 1;
 ...</pre></li>
     </ul>
 
@@ -511,7 +504,7 @@ ExtractTextPluginCompilation.prototype.addModule = function(identifier, original
 	} else {
 		m = this.modulesByIdentifier[identifier];
 		m.addPrevModules(prevModules);
-		if(originalModule.index2 &#x3c; m.<span class="apidocCodeKeywordSpan">getOriginalModule</span>().index2) {
+		if(originalModule.index2 &lt; m.<span class="apidocCodeKeywordSpan">getOriginalModule</span>().index2) {
 			m.setOriginalModule(originalModule);
 		}
 	}
@@ -542,9 +535,9 @@ ExtractTextPluginCompilation.prototype.addResultToChunk = function(identifier, r
 };
 
 function isInvalidOrder(a, b) {
-	var bBeforeA = a.<span class="apidocCodeKeywordSpan">getPrevModules</span>().indexOf(b) &#x3e;= 0;
-	var aBeforeB = b.getPrevModules().indexOf(a) &#x3e;= 0;
-	return aBeforeB &#x26;&#x26; bBeforeA;
+	var bBeforeA = a.<span class="apidocCodeKeywordSpan">getPrevModules</span>().indexOf(b) &gt;= 0;
+	var aBeforeB = b.getPrevModules().indexOf(a) &gt;= 0;
+	return aBeforeB &amp;&amp; bBeforeA;
 }
 
 function getOrder(a, b) {
@@ -567,16 +560,16 @@ function getOrder(a, b) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 	var bIndex = b.getOriginalModule().index2;
-	if(aIndex &#x3c; bIndex) return -1;
-	if(aIndex &#x3e; bIndex) return 1;
-	var bBeforeA = a.getPrevModules().indexOf(b) &#x3e;= 0;
-	var aBeforeB = b.getPrevModules().indexOf(a) &#x3e;= 0;
-	if(aBeforeB &#x26;&#x26; !bBeforeA) return -1;
-	if(!aBeforeB &#x26;&#x26; bBeforeA) return 1;
+	if(aIndex &lt; bIndex) return -1;
+	if(aIndex &gt; bIndex) return 1;
+	var bBeforeA = a.getPrevModules().indexOf(b) &gt;= 0;
+	var aBeforeB = b.getPrevModules().indexOf(a) &gt;= 0;
+	if(aBeforeB &amp;&amp; !bBeforeA) return -1;
+	if(!aBeforeB &amp;&amp; bBeforeA) return 1;
 	var ai = a.<span class="apidocCodeKeywordSpan">identifier</span>();
 	var bi = b.identifier();
-	if(ai &#x3c; bi) return -1;
-	if(ai &#x3e; bi) return 1;
+	if(ai &lt; bi) return -1;
+	if(ai &gt; bi) return 1;
 	return 0;
 }
 
@@ -595,7 +588,7 @@ function ExtractTextPlugin(options) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">removeChunk = function (chunk) {
 	var idx = this.chunks.indexOf(chunk);
-	if(idx &#x3e;= 0) {
+	if(idx &gt;= 0) {
 		this.chunks.splice(idx, 1);
 		chunk.removeModule(this);
 		return true;
@@ -638,7 +631,7 @@ function ExtractTextPlugin(options) {
 	} else {
 		m = this.modulesByIdentifier[identifier];
 		m.addPrevModules(prevModules);
-		if(originalModule.index2 &#x3c; m.getOriginalModule().index2) {
+		if(originalModule.index2 &lt; m.getOriginalModule().index2) {
 			m.<span class="apidocCodeKeywordSpan">setOriginalModule</span>(originalModule);
 		}
 	}
@@ -680,7 +673,7 @@ ExtractTextPlugin.prototype.renderExtractedChunk = function(chunk) {
 };
 
 function isInvalidOrder(a, b) {
-	var bBeforeA = a.getPrevModules().indexOf(b) &#x3e;= 0;
+	var bBeforeA = a.getPrevModules().indexOf(b) &gt;= 0;
 ...</pre></li>
     </ul>
 
@@ -703,7 +696,7 @@ function isInvalidOrder(a, b) {
 	return source;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-			&#x22;}&#x22;
+			"}"
 		);
 	}
 	return source;
@@ -714,10 +707,10 @@ ExtractTextPlugin.prototype.loader = function(options) {
 };
 
 ExtractTextPlugin.prototype.extract = function(options) {
-	if(arguments.length &#x3e; 1) {
-		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
-						&#x22;object *or* the loader(s).\n&#x22; +
-						&#x22;Example: if your old code looked like this:\n&#x22; +
+	if(arguments.length &gt; 1) {
+		throw new Error("Breaking change: extract now only takes a single argument. Either an options " +
+						"object *or* the loader(s).\n" +
+						"Example: if your old code looked like this:\n" +
 ...</pre></li>
     </ul>
 
@@ -738,38 +731,38 @@ ExtractTextPlugin.prototype.extract = function(options) {
 	// We already in child compiler, return empty bundle
 	if(this[NS] === undefined) {
 		throw new Error(
-			&#x27;&#x22;extract-text-webpack-plugin&#x22; loader is used without the corresponding plugin, &#x27; +
-			&#x27;refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example&#x27;
+			'"extract-text-webpack-plugin" loader is used without the corresponding plugin, ' +
+			'refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example'
 		);
 	} else if(this[NS] === false) {
-		return &#x22;&#x22;;
+		return "";
 	} else if(this[NS](null, query)) {
 		if(query.omit) {
 			this.loaderIndex += +query.omit + 1;
-			request = request.split(&#x22;!&#x22;).slice(+query.omit).join(&#x22;!&#x22;);
+			request = request.split("!").slice(+query.omit).join("!");
 			loaders = loaders.slice(+query.omit);
 		}
 		var resultSource;
 		if(query.remove) {
-			resultSource = &#x22;// removed by extract-text-webpack-plugin&#x22;;
+			resultSource = "// removed by extract-text-webpack-plugin";
 		} else {
 			resultSource = undefined;
 		}
 
-		var childFilename = &#x22;extract-text-webpack-plugin-output-filename&#x22;; // eslint-disable-line no-path-concat
-		var publicPath = typeof query.publicPath === &#x22;string&#x22; ? query.publicPath : this._compilation.outputOptions.publicPath;
+		var childFilename = "extract-text-webpack-plugin-output-filename"; // eslint-disable-line no-path-concat
+		var publicPath = typeof query.publicPath === "string" ? query.publicPath : this._compilation.outputOptions.publicPath;
 		var outputOptions = {
 			filename: childFilename,
 			publicPath: publicPath
 		};
-		var childCompiler = this._compilation.createChildCompiler(&#x22;extract-text-webpack-plugin&#x22;, outputOptions);
+		var childCompiler = this._compilation.createChildCompiler("extract-text-webpack-plugin", outputOptions);
 		childCompiler.apply(new NodeTemplatePlugin(outputOptions));
-		childCompiler.apply(new LibraryTemplatePlugin(null, &#x22;commonjs2&#x22;));
+		childCompiler.apply(new LibraryTemplatePlugin(null, "commonjs2"));
 		childCompiler.apply(new NodeTargetPlugin());
-		childCompiler.apply(new SingleEntryPlugin(this.context, &#x22;!!&#x22; + request));
+		childCompiler.apply(new SingleEntryPlugin(this.context, "!!" + request));
 		childCompiler.apply(new LimitChunkCountPlugin({ maxChunks: 1 }));
-		var subCache = &#x22;subcache &#x22; + NS + &#x22; &#x22; + request; // eslint-disable-line no-path-concat
-		childCompiler.plugin(&#x22;compilation&#x22;, function(compilation) {
+		var subCache = "subcache " + NS + " " + request; // eslint-disable-line no-path-concat
+		childCompiler.plugin("compilation", function(compilation) {
 			if(compilation.cache) {
 				if(!compilation.cache[subCache])
 					compilation.cache[subCache] = {};
@@ -777,9 +770,9 @@ ExtractTextPlugin.prototype.extract = function(options) {
 			}
 		});
 		// We set loaderContext[NS] = false to indicate we already in
-		// a child compiler so we don&#x27;t spawn another child compilers from there.
-		childCompiler.plugin(&#x22;this-compilation&#x22;, function(compilation) {
-			compilation.plugin(&#x22;normal-module-loader&#x22;, function(loaderContext, module) {
+		// a child compiler so we don't spawn another child compilers from there.
+		childCompiler.plugin("this-compilation", function(compilation) {
+			compilation.plugin("normal-module-loader", function(loaderContext, module) {
 				loaderContext[NS] = false;
 				if (module.request === request) {
 					module.loaders = loaders.map(function(loader) {
@@ -793,8 +786,8 @@ ExtractTextPlugin.prototype.extract = function(options) {
 		});
 
 		var source;
-		childCompiler.plugin(&#x22;after-compile&#x22;, function(compilation, callback) {
-			source = compilation.assets[childFilename] &#x26;&#x26; compilation.assets[childFilename].source();
+		childCompiler.plugin("after-compile", function(compilation, callback) {
+			source = compilation.assets[childFilename] &amp;&amp; compilation.assets[childFilename].source();
 
 			// Remove all chunk assets
 			compilation.chunks.forEach(function(chunk) {
@@ -809,7 +802,7 @@ ExtractTextPlugin.prototype.extract = function(options) {
 		childCompiler.runAsChild(function(err, entries, compilation) {
 			if(err) return callback(err);
 
-			if(compilation.errors.length &#x3e; 0) {
+			if(compilation.errors.length &gt; 0) {
 				return callback(compilation.errors[0]);
 			}
 			compilation.fileDependencies.forEach(function(dep) {
@@ -819,11 +812,11 @@ ExtractTextPlugin.prototype.extract = function(options) {
 				this.addContextDependency(dep);
 			}, this);
 			if(!source) {
-				return callback(new Error(&#x22;Didn&#x27;t get a result from child compiler&#x22;));
+				return callback(new Error("Didn't get a result from child compiler"));
 			}
 			try {
 				var text = this.exec(source, request);
-				if(typeof text === &#x22;string&#x22;)
+				if(typeof text === "string")
 					text = [[0, text]];
 				text.forEach(function(item) {
 					var id = item[0];
@@ -833,8 +826,8 @@ ExtractTextPlugin.prototype.extract = function(options) {
 					});
 				});
 				this[NS](text, query);
-				if(text.locals &#x26;&#x26; typeof resultSource !== &#x22;undefined&#x22;) {
-					resultSource += &#x22;\nmodule.exports = &#x22; + JSON.stringify(text.locals) + &#x22;;&#x22;;
+				if(text.locals &amp;&amp; typeof resultSource !== "undefined") {
+					resultSource += "\nmodule.exports = " + JSON.stringify(text.locals) + ";";
 				}
 			} catch(e) {
 				return callback(e);
@@ -858,3 +851,4 @@ ExtractTextPlugin.prototype.extract = function(options) {
     ]
 </div>
 </div>
+</body></html>

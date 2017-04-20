@@ -5,7 +5,7 @@
 <tspan x="10" y="42"></tspan>
 <tspan x="10" y="58">node_modules</tspan>
 <tspan x="10" y="74">├─┬ extract-text-webpack-plugin@2.1.0 </tspan>
-<tspan x="10" y="90">│ ├─┬ ajv@4.11.6 </tspan>
+<tspan x="10" y="90">│ ├─┬ ajv@4.11.7 </tspan>
 <tspan x="10" y="106">│ │ ├── co@4.6.0 </tspan>
 <tspan x="10" y="122">│ │ └─┬ json-stable-stringify@1.0.1 </tspan>
 <tspan x="10" y="138">│ │   └── jsonify@0.0.0 </tspan>
