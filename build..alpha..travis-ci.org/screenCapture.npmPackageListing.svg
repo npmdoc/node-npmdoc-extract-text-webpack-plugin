@@ -1,20 +1,20 @@
 <svg height="270" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="270" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-20 20:04:55 +0000   155153 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-20 20:04:55 +0000     2581 bytes  CHANGELOG.md</tspan>
-<tspan x="10" y="58">  2.  2017-04-20 20:04:55 +0000     1936 bytes  ExtractedModule.js</tspan>
-<tspan x="10" y="74">  3.  2017-04-20 20:04:55 +0000     1071 bytes  LICENSE</tspan>
-<tspan x="10" y="90">  4.  2017-04-20 20:04:55 +0000      429 bytes  OrderUndefinedError.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-20 20:04:55 +0000     7298 bytes  README.md</tspan>
-<tspan x="10" y="122">  6.  2017-04-20 20:04:55 +0000     2073 bytes  RELEASE.md</tspan>
-<tspan x="10" y="138">  7.  2017-04-20 20:04:55 +0000    11613 bytes  index.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-20 20:04:55 +0000     4672 bytes  loader.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-20 20:04:55 +0000     4427 bytes  logo.svg</tspan>
-<tspan x="10" y="186"> 10.  2017-04-20 20:04:55 +0000     1193 bytes  package.json</tspan>
-<tspan x="10" y="202"> 11.  2017-04-20 20:04:55 +0000      606 bytes  schema/loader-schema.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-20 20:04:55 +0000     1098 bytes  schema/plugin-schema.json</tspan>
-<tspan x="10" y="234"> 13.  2017-04-20 20:04:55 +0000      272 bytes  schema/validator.js</tspan>
-<tspan x="10" y="250"> 14.  2017-04-20 20:04:55 +0000   115884 bytes  yarn.lock</tspan>
+<tspan x="10" y="26">  0.  2017-04-27 20:06:32 +0000   157628 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-27 20:06:32 +0000     2581 bytes  CHANGELOG.md</tspan>
+<tspan x="10" y="58">  2.  2017-04-27 20:06:32 +0000     1936 bytes  ExtractedModule.js</tspan>
+<tspan x="10" y="74">  3.  2017-04-27 20:06:32 +0000     1071 bytes  LICENSE</tspan>
+<tspan x="10" y="90">  4.  2017-04-27 20:06:32 +0000      429 bytes  OrderUndefinedError.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-27 20:06:32 +0000     7298 bytes  README.md</tspan>
+<tspan x="10" y="122">  6.  2017-04-27 20:06:32 +0000     2073 bytes  RELEASE.md</tspan>
+<tspan x="10" y="138">  7.  2017-04-27 20:06:32 +0000    11613 bytes  index.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-27 20:06:32 +0000     4672 bytes  loader.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-27 20:06:32 +0000     4427 bytes  logo.svg</tspan>
+<tspan x="10" y="186"> 10.  2017-04-27 20:06:32 +0000     3668 bytes  package.json</tspan>
+<tspan x="10" y="202"> 11.  2017-04-27 20:06:32 +0000      606 bytes  schema/loader-schema.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-27 20:06:32 +0000     1098 bytes  schema/plugin-schema.json</tspan>
+<tspan x="10" y="234"> 13.  2017-04-27 20:06:32 +0000      272 bytes  schema/validator.js</tspan>
+<tspan x="10" y="250"> 14.  2017-04-27 20:06:32 +0000   115884 bytes  yarn.lock</tspan>
 </text>
 </svg>

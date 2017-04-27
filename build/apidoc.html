@@ -90,6 +90,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.loader">
             function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>loader
             <span class="apidocSignatureSpan">(options)</span>
@@ -100,6 +109,12 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>ExtractedModule.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>index.prototype</span>
 
         </li>
 
@@ -212,6 +227,95 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin.index">module extract-text-webpack-plugin.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.index">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>index
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.extract">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.</span>extract
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.loader">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.</span>loader
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin.index.prototype">module extract-text-webpack-plugin.index.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.prototype.apply">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>apply
+            <span class="apidocSignatureSpan">(compiler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.prototype.applyAdditionalInformation">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>applyAdditionalInformation
+            <span class="apidocSignatureSpan">(source, info)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.prototype.extract">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>extract
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.prototype.loader">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>loader
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.prototype.mergeNonInitialChunks">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>mergeNonInitialChunks
+            <span class="apidocSignatureSpan">(chunk, intoChunk, checkedChunks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.extract-text-webpack-plugin.index.prototype.renderExtractedChunk">
+            function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>renderExtractedChunk
+            <span class="apidocSignatureSpan">(chunk)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
     <li class="apidocModuleLi"><a href="#apidoc.module.extract-text-webpack-plugin.loader">module extract-text-webpack-plugin.loader</a><ol>
 
         <li>
@@ -307,22 +411,60 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">extract = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-const ExtractTextPlugin = require(&#x22;extract-text-webpack-plugin&#x22;);
+};
 
-module.exports = {
-module: {
-  rules: [
-    {
-      test: /\.css$/,
-      use: ExtractTextPlugin.<span class="apidocCodeKeywordSpan">extract</span>({
-        fallback: &#x22;style-loader&#x22;,
-        use: &#x22;css-loader&#x22;
-      })
-    }
-  ]
-},
-plugins: [
+ExtractTextPlugin.prototype.extract = function(options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the loader(s).\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+						&#x22;    ExtractTextPlugin.<span class="apidocCodeKeywordSpan">extract</span>(&#x27;style-loader&#x27;, &#x27;css-loader&#
+x27;)\n\n&#x22; +
+						&#x22;You would change it to:\n&#x22; +
+						&#x22;    ExtractTextPlugin.extract({ fallback: &#x27;style-loader&#x27;, use: &#x27;css-loader&#x27; })\n\n&#x22; +
+						&#x22;The available options are:\n&#x22; +
+						&#x22;    use: string | object | loader[]\n&#x22; +
+						&#x22;    fallback: string | object | loader[]\n&#x22; +
+						&#x22;    publicPath: string\n&#x22;);
+	}
 ...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index" id="apidoc.element.extract-text-webpack-plugin.index">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtractTextPlugin(options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: ExtractTextPlugin now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the name of the result file.\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+						&#x22;    new ExtractTextPlugin(&#x27;css/[name].css&#x27;, { disable: false, allChunks: true })\n\n&#x22; +
+						&#x22;You would change it to:\n&#x22; +
+						&#x22;    new ExtractTextPlugin({ filename: &#x27;css/[name].css&#x27;, disable: false, allChunks: true })\n\n&#x22; +
+						&#x22;The available options are:\n&#x22; +
+						&#x22;    filename: string\n&#x22; +
+						&#x22;    allChunks: boolean\n&#x22; +
+						&#x22;    disable: boolean\n&#x22;);
+	}
+	if(isString(options)) {
+		options = { filename: options };
+	} else {
+		schemaTester(pluginSchema, options);
+	}
+	this.filename = options.filename;
+	this.id = options.id != null ? options.id : ++nextId;
+	this.options = {};
+	mergeOptions(this.options, options);
+	delete this.options.filename;
+	delete this.options.id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -355,6 +497,8 @@ ExtractTextPlugin.prototype.extract = function(options) {
 						&#x22;Example: if your old code looked like this:\n&#x22; +
 ...</pre></li>
     </ul>
+
+
 
 
 
@@ -681,6 +825,472 @@ ExtractTextPlugin.prototype.renderExtractedChunk = function(chunk) {
 
 function isInvalidOrder(a, b) {
 	var bBeforeA = a.getPrevModules().indexOf(b) &#x3e;= 0;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.extract-text-webpack-plugin.index" id="apidoc.module.extract-text-webpack-plugin.index">module extract-text-webpack-plugin.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.index" id="apidoc.element.extract-text-webpack-plugin.index.index">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.</span>index
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtractTextPlugin(options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: ExtractTextPlugin now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the name of the result file.\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+						&#x22;    new ExtractTextPlugin(&#x27;css/[name].css&#x27;, { disable: false, allChunks: true })\n\n&#x22; +
+						&#x22;You would change it to:\n&#x22; +
+						&#x22;    new ExtractTextPlugin({ filename: &#x27;css/[name].css&#x27;, disable: false, allChunks: true })\n\n&#x22; +
+						&#x22;The available options are:\n&#x22; +
+						&#x22;    filename: string\n&#x22; +
+						&#x22;    allChunks: boolean\n&#x22; +
+						&#x22;    disable: boolean\n&#x22;);
+	}
+	if(isString(options)) {
+		options = { filename: options };
+	} else {
+		schemaTester(pluginSchema, options);
+	}
+	this.filename = options.filename;
+	this.id = options.id != null ? options.id : ++nextId;
+	this.options = {};
+	mergeOptions(this.options, options);
+	delete this.options.filename;
+	delete this.options.id;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.extract" id="apidoc.element.extract-text-webpack-plugin.index.extract">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.</span>extract
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ExtractTextPlugin.prototype.extract = function(options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the loader(s).\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+						&#x22;    ExtractTextPlugin.<span class="apidocCodeKeywordSpan">extract</span>(&#x27;style-loader&#x27;, &#x27;css-loader&#
+x27;)\n\n&#x22; +
+						&#x22;You would change it to:\n&#x22; +
+						&#x22;    ExtractTextPlugin.extract({ fallback: &#x27;style-loader&#x27;, use: &#x27;css-loader&#x27; })\n\n&#x22; +
+						&#x22;The available options are:\n&#x22; +
+						&#x22;    use: string | object | loader[]\n&#x22; +
+						&#x22;    fallback: string | object | loader[]\n&#x22; +
+						&#x22;    publicPath: string\n&#x22;);
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.loader" id="apidoc.element.extract-text-webpack-plugin.index.loader">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.</span>loader
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loader = function (options) {
+	return { loader: require.resolve(&#x22;./loader&#x22;), options: options };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			&#x22;}&#x22;
+		);
+	}
+	return source;
+};
+
+ExtractTextPlugin.prototype.loader = function(options) {
+	return ExtractTextPlugin.<span class="apidocCodeKeywordSpan">loader</span>(mergeOptions({id: this.id}, options));
+};
+
+ExtractTextPlugin.prototype.extract = function(options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the loader(s).\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.extract-text-webpack-plugin.index.prototype" id="apidoc.module.extract-text-webpack-plugin.index.prototype">module extract-text-webpack-plugin.index.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.prototype.apply" id="apidoc.element.extract-text-webpack-plugin.index.prototype.apply">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>apply
+        <span class="apidocSignatureSpan">(compiler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apply = function (compiler) {
+	var options = this.options;
+	compiler.plugin(&#x22;this-compilation&#x22;, function(compilation) {
+		var extractCompilation = new ExtractTextPluginCompilation();
+		compilation.plugin(&#x22;normal-module-loader&#x22;, function(loaderContext, module) {
+			loaderContext[NS] = function(content, opt) {
+				if(options.disable)
+					return false;
+				if(!Array.isArray(content) &#x26;&#x26; content != null)
+					throw new Error(&#x22;Exported value was not extracted as an array: &#x22; + JSON.stringify(content));
+				module[NS] = {
+					content: content,
+					options: opt || {}
+				};
+				return options.allChunks || module[NS + &#x22;/extract&#x22;]; // eslint-disable-line no-path-concat
+			};
+		});
+		var filename = this.filename;
+		var id = this.id;
+		var extractedChunks, entryChunks, initialChunks;
+		compilation.plugin(&#x22;optimize-tree&#x22;, function(chunks, modules, callback) {
+			extractedChunks = chunks.map(function() {
+				return new Chunk();
+			});
+			chunks.forEach(function(chunk, i) {
+				var extractedChunk = extractedChunks[i];
+				extractedChunk.index = i;
+				extractedChunk.originalChunk = chunk;
+				extractedChunk.name = chunk.name;
+				extractedChunk.entrypoints = chunk.entrypoints;
+				chunk.chunks.forEach(function(c) {
+					extractedChunk.addChunk(extractedChunks[chunks.indexOf(c)]);
+				});
+				chunk.parents.forEach(function(c) {
+					extractedChunk.addParent(extractedChunks[chunks.indexOf(c)]);
+				});
+			});
+			async.forEach(chunks, function(chunk, callback) {
+				var extractedChunk = extractedChunks[chunks.indexOf(chunk)];
+				var shouldExtract = !!(options.allChunks || chunk.isInitial());
+				async.forEach(chunk.modules.slice(), function(module, callback) {
+					var meta = module[NS];
+					if(meta &#x26;&#x26; (!meta.options.id || meta.options.id === id)) {
+						var wasExtracted = Array.isArray(meta.content);
+						if(shouldExtract !== wasExtracted) {
+							module[NS + &#x22;/extract&#x22;] = shouldExtract; // eslint-disable-line no-path-concat
+							compilation.rebuildModule(module, function(err) {
+								if(err) {
+									compilation.errors.push(err);
+									return callback();
+								}
+								meta = module[NS];
+								if(!Array.isArray(meta.content)) {
+									err = new Error(module.identifier() + &#x22; doesn&#x27;t export content&#x22;);
+									compilation.errors.push(err);
+									return callback();
+								}
+								if(meta.content)
+									extractCompilation.addResultToChunk(module.identifier(), meta.content, module, extractedChunk);
+								callback();
+							});
+						} else {
+							if(meta.content)
+								extractCompilation.addResultToChunk(module.identifier(), meta.content, module, extractedChunk);
+							callback();
+						}
+					} else callback();
+				}, function(err) {
+					if(err) return callback(err);
+					callback();
+				});
+			}, function(err) {
+				if(err) return callback(err);
+				extractedChunks.forEach(function(extractedChunk) {
+					if(extractedChunk.isInitial())
+						this.mergeNonInitialChunks(extractedChunk);
+				}, this);
+				extractedChunks.forEach(function(extractedChunk) {
+					if(!extractedChunk.isInitial()) {
+						extractedChunk.modules.slice().forEach(function(module) {
+							extractedChunk.removeModule(module);
+						});
+					}
+				});
+				compilation.applyPlugins(&#x22;optimize-extracted-chunks&#x22;, extractedChunks);
+				callback();
+			}.bind(this));
+		}.bind(this));
+		compilation.plugin(&#x22;additional-assets&#x22;, function(callback) {
+			extractedChunks.forEach(function(extractedChunk) {
+				if(extractedChunk.modules.length) {
+					extractedChunk.modules.sort(function(a, b) {
+						if(!options.ignoreOrder &#x26;&#x26; isInvalidOrder(a, b)) {
+							compilation.errors.push(new OrderUndefinedError(a.getOriginalModule()));
+							compilation.errors.push(new OrderUndefinedError(b.getOriginalModule()));
+						}
+						return getOrder(a, b);
+					});
+					var chunk = extractedChunk.originalChunk;
+					var source = this.renderExtractedChunk(extractedChunk);
+
+					var getPath = (format) =&#x3e; compilation.getPath(format, {
+						chunk: chunk
+					}).replace(/\[(?:(\w+):)?contenthash(?::([a-z]+\d*))?(?::(\d+))?\]/ig, function() {
+						return loaderUtils.getHa ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var childFilename = &#x22;extract-text-webpack-plugin-output-filename&#x22;; // eslint-disable-line no-path-concat
+		var publicPath = typeof query.publicPath === &#x22;string&#x22; ? query.publicPath : this._compilation.outputOptions.publicPath
+;
+		var outputOptions = {
+			filename: childFilename,
+			publicPath: publicPath
+		};
+		var childCompiler = this._compilation.createChildCompiler(&#x22;extract-text-webpack-plugin&#x22;, outputOptions);
+		childCompiler.<span class="apidocCodeKeywordSpan">apply</span>(new NodeTemplatePlugin(outputOptions));
+		childCompiler.apply(new LibraryTemplatePlugin(null, &#x22;commonjs2&#x22;));
+		childCompiler.apply(new NodeTargetPlugin());
+		childCompiler.apply(new SingleEntryPlugin(this.context, &#x22;!!&#x22; + request));
+		childCompiler.apply(new LimitChunkCountPlugin({ maxChunks: 1 }));
+		var subCache = &#x22;subcache &#x22; + NS + &#x22; &#x22; + request; // eslint-disable-line no-path-concat
+		childCompiler.plugin(&#x22;compilation&#x22;, function(compilation) {
+			if(compilation.cache) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.prototype.applyAdditionalInformation" id="apidoc.element.extract-text-webpack-plugin.index.prototype.applyAdditionalInformation">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>applyAdditionalInformation
+        <span class="apidocSignatureSpan">(source, info)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">applyAdditionalInformation = function (source, info) {
+	if(info) {
+		return new ConcatSource(
+			&#x22;@media &#x22; + info[0] + &#x22; {&#x22;,
+			source,
+			&#x22;}&#x22;
+		);
+	}
+	return source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}, this);
+};
+
+ExtractTextPlugin.prototype.renderExtractedChunk = function(chunk) {
+	var source = new ConcatSource();
+	chunk.modules.forEach(function(module) {
+		var moduleSource = module.source();
+		source.add(this.<span class="apidocCodeKeywordSpan">applyAdditionalInformation</span>(moduleSource, module.additionalInformation
+));
+	}, this);
+	return source;
+};
+
+function isInvalidOrder(a, b) {
+	var bBeforeA = a.getPrevModules().indexOf(b) &#x3e;= 0;
+	var aBeforeB = b.getPrevModules().indexOf(a) &#x3e;= 0;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.prototype.extract" id="apidoc.element.extract-text-webpack-plugin.index.prototype.extract">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>extract
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function (options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the loader(s).\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+						&#x22;    ExtractTextPlugin.extract(&#x27;style-loader&#x27;, &#x27;css-loader&#x27;)\n\n&#x22; +
+						&#x22;You would change it to:\n&#x22; +
+						&#x22;    ExtractTextPlugin.extract({ fallback: &#x27;style-loader&#x27;, use: &#x27;css-loader&#x27; })\n\n&#x22; +
+						&#x22;The available options are:\n&#x22; +
+						&#x22;    use: string | object | loader[]\n&#x22; +
+						&#x22;    fallback: string | object | loader[]\n&#x22; +
+						&#x22;    publicPath: string\n&#x22;);
+	}
+	if(options.fallbackLoader) {
+		console.warn(&#x27;fallbackLoader option has been deprecated - replace with &#x22;fallback&#x22;&#x27;);
+	}
+	if(options.loader) {
+		console.warn(&#x27;loader option has been deprecated - replace with &#x22;use&#x22;&#x27;);
+	}
+	if(Array.isArray(options) || isString(options) || typeof options.options === &#x22;object&#x22; || typeof options.query === &#x27;object&#x27;) {
+		options = { loader: options };
+	} else {
+		schemaTester(loaderSchema, options);
+	}
+	var loader = options.use ||  options.loader;
+	var before = options.fallback || options.fallbackLoader || [];
+	if(isString(loader)) {
+		loader = loader.split(&#x22;!&#x22;);
+	}
+	if(isString(before)) {
+		before = before.split(&#x22;!&#x22;);
+	} else if(!Array.isArray(before)) {
+		before = [before];
+	}
+	options = mergeOptions({omit: before.length, remove: true}, options);
+	delete options.loader;
+	delete options.use;
+	delete options.fallback;
+	delete options.fallbackLoader;
+	return [this.loader(options)]
+		.concat(before, loader)
+		.map(getLoaderObject);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+ExtractTextPlugin.prototype.extract = function(options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the loader(s).\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+						&#x22;    ExtractTextPlugin.<span class="apidocCodeKeywordSpan">extract</span>(&#x27;style-loader&#x27;, &#x27;css-loader&#
+x27;)\n\n&#x22; +
+						&#x22;You would change it to:\n&#x22; +
+						&#x22;    ExtractTextPlugin.extract({ fallback: &#x27;style-loader&#x27;, use: &#x27;css-loader&#x27; })\n\n&#x22; +
+						&#x22;The available options are:\n&#x22; +
+						&#x22;    use: string | object | loader[]\n&#x22; +
+						&#x22;    fallback: string | object | loader[]\n&#x22; +
+						&#x22;    publicPath: string\n&#x22;);
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.prototype.loader" id="apidoc.element.extract-text-webpack-plugin.index.prototype.loader">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>loader
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loader = function (options) {
+	return ExtractTextPlugin.loader(mergeOptions({id: this.id}, options));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			&#x22;}&#x22;
+		);
+	}
+	return source;
+};
+
+ExtractTextPlugin.prototype.loader = function(options) {
+	return ExtractTextPlugin.<span class="apidocCodeKeywordSpan">loader</span>(mergeOptions({id: this.id}, options));
+};
+
+ExtractTextPlugin.prototype.extract = function(options) {
+	if(arguments.length &#x3e; 1) {
+		throw new Error(&#x22;Breaking change: extract now only takes a single argument. Either an options &#x22; +
+						&#x22;object *or* the loader(s).\n&#x22; +
+						&#x22;Example: if your old code looked like this:\n&#x22; +
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.prototype.mergeNonInitialChunks" id="apidoc.element.extract-text-webpack-plugin.index.prototype.mergeNonInitialChunks">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>mergeNonInitialChunks
+        <span class="apidocSignatureSpan">(chunk, intoChunk, checkedChunks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeNonInitialChunks = function (chunk, intoChunk, checkedChunks) {
+	if(!intoChunk) {
+		checkedChunks = [];
+		chunk.chunks.forEach(function(c) {
+			if(c.isInitial()) return;
+			this.mergeNonInitialChunks(c, chunk, checkedChunks);
+		}, this);
+	} else if(checkedChunks.indexOf(chunk) &#x3c; 0) {
+		checkedChunks.push(chunk);
+		chunk.modules.slice().forEach(function(module) {
+			intoChunk.addModule(module);
+			module.addChunk(intoChunk);
+		});
+		chunk.chunks.forEach(function(c) {
+			if(c.isInitial()) return;
+			this.mergeNonInitialChunks(c, intoChunk, checkedChunks);
+		}, this);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+ExtractTextPlugin.prototype.mergeNonInitialChunks = function(chunk, intoChunk, checkedChunks) {
+	if(!intoChunk) {
+		checkedChunks = [];
+		chunk.chunks.forEach(function(c) {
+			if(c.isInitial()) return;
+			this.<span class="apidocCodeKeywordSpan">mergeNonInitialChunks</span>(c, chunk, checkedChunks);
+		}, this);
+	} else if(checkedChunks.indexOf(chunk) &#x3c; 0) {
+		checkedChunks.push(chunk);
+		chunk.modules.slice().forEach(function(module) {
+			intoChunk.addModule(module);
+			module.addChunk(intoChunk);
+		});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.extract-text-webpack-plugin.index.prototype.renderExtractedChunk" id="apidoc.element.extract-text-webpack-plugin.index.prototype.renderExtractedChunk">
+        function <span class="apidocSignatureSpan">extract-text-webpack-plugin.index.prototype.</span>renderExtractedChunk
+        <span class="apidocSignatureSpan">(chunk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renderExtractedChunk = function (chunk) {
+	var source = new ConcatSource();
+	chunk.modules.forEach(function(module) {
+		var moduleSource = module.source();
+		source.add(this.applyAdditionalInformation(moduleSource, module.additionalInformation));
+	}, this);
+	return source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+						if(!options.ignoreOrder &#x26;&#x26; isInvalidOrder(a, b)) {
+							compilation.errors.push(new OrderUndefinedError(a.getOriginalModule()));
+							compilation.errors.push(new OrderUndefinedError(b.getOriginalModule()));
+						}
+						return getOrder(a, b);
+					});
+					var chunk = extractedChunk.originalChunk;
+					var source = this.<span class="apidocCodeKeywordSpan">renderExtractedChunk</span>(extractedChunk);
+
+					var getPath = (format) =&#x3e; compilation.getPath(format, {
+						chunk: chunk
+					}).replace(/\[(?:(\w+):)?contenthash(?::([a-z]+\d*))?(?::(\d+))?\]/ig, function() {
+						return loaderUtils.getHashDigest(source.source(), arguments[1], arguments[2], parseInt(arguments[3], 10));
+					});
 ...</pre></li>
     </ul>
 
